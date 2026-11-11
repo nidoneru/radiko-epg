@@ -264,7 +264,7 @@ def render_page(area, date_str, days, stations, data, is_today, now_jst):
 <h1>radiko-epg <span class="note">{AREA_NAME[area]} {d.month}/{d.day}({WEEKDAYS[d.weekday()]}) の番組表</span></h1>
 <div class="bar">
   <label>エリア <select id="area" data-current="{area}">{''.join(area_opts)}</select></label>
-  <span class="note">{gen} 生成</span>
+  <span class="note">最終更新 {gen}</span>
 </div>
 <div class="tabs">{''.join(tabs)}</div>
 </header>
