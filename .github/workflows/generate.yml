@@ -2,8 +2,8 @@ name: generate
 
 on:
   schedule:
-    # 05:00 JST を起点に3時間おき（UTCでは 20,23,2,5,8,11,14,17時）
-    - cron: "0 2,5,8,11,14,17,20,23 * * *"
+    # 05:07 JST を起点に3時間おき（UTCでは 20,23,2,5,8,11,14,17時）
+    - cron: "7 2,5,8,11,14,17,20,23 * * *"
   workflow_dispatch:
   push:
     branches: [main]
