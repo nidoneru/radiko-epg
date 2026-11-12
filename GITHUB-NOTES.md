@@ -2,8 +2,6 @@
 
 時刻はすべて日本時間（UTC+9）。
 
-## 記録（新しい順）
-
 ### 2026-11-12（pages build and deployment の注釈で表示）
 **Node.js 20 の廃止に伴う強制移行**
 - 種別：更新（対象：Actions / Pages）
