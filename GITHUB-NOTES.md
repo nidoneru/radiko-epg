@@ -1,4 +1,4 @@
-# GitHub 公式情報メモ（radiko-epg 照合用）
+# GitHub 公式情報メモ
 
 時刻はすべて日本時間（UTC+9）。
 
