@@ -82,6 +82,10 @@ thead th.hr { background: #01378E; z-index: 3; }
 .pr.now { background: #fff3bf; outline: 2px solid #f5a623; border-radius: 3px; }
 .pr.now::before { content: "放送中 "; color: #c00; font-weight: bold; font-size: 10.5px; }
 footer { flex: none; padding: 4px 8px 8px; }
+footer details { font-size: 10px; color: #666; }
+footer summary { cursor: pointer; padding: 2px 0; }
+footer ul { margin: 4px 0 2px; padding-left: 16px; line-height: 1.6; }
+@media (min-width: 641px) { footer summary { display: none; } }
 """
 
 JS = """
@@ -102,7 +106,16 @@ function markNow() {
 }
 var first = markNow();
 if (first && document.body.dataset.today === '1') {
-  first.scrollIntoView({ block: 'center' });
+  var wrap = document.querySelector('.wrap');
+  if (wrap) {
+    var er = first.getBoundingClientRect();
+    var wr = wrap.getBoundingClientRect();
+    wrap.scrollTop += (er.top - wr.top) - (wrap.clientHeight - er.height) / 2;
+  }
+}
+var fd = document.querySelector('footer details');
+if (fd && window.matchMedia('(min-width: 641px)').matches) {
+  fd.open = true;
 }
 setInterval(markNow, 60000);
 document.querySelectorAll('.ti.has').forEach(function(el) {
@@ -275,7 +288,17 @@ def render_page(area, date_str, days, stations, data, is_today, now_jst):
 </table>
 </div>
 <footer>
-<p class="note">放送中の判定はこのページが端末の時計で自動で行います。このサイトは radiko 公式のものではありません。番組データは株式会社radikoおよび各放送局が提供する情報をもとに表示しています。番組内容は変更される場合があります。番組の聴取は radiko 公式サイトをご利用ください。無料で聴取できるのは、お住まいのエリアで配信されている放送局のみです。</p>
+<details>
+<summary>注記</summary>
+<ul>
+<li>放送中の表示は、端末の時計で判定</li>
+<li>このサイトは radiko 公式ではない</li>
+<li>番組データは株式会社radikoと各放送局の提供情報に基づく</li>
+<li>番組内容は変更される場合がある</li>
+<li>聴取は radiko 公式サイトで</li>
+<li>無料で聴けるのは、自分のエリアの放送局のみ</li>
+</ul>
+</details>
 </footer>
 <script>{JS}</script>
 </body>
