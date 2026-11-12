@@ -42,6 +42,13 @@
 - 訳：Webhooks と Actions の障害。
 - 公式：https://www.githubstatus.com/incidents/xxb3l2bm76dr
 
+### 2026-11-09 14:59 – 18:09
+**Increased timeouts due to surge in anonymous users**
+- 種別：障害（GitHub Status / minor、対象：API Requests）
+- 原文抜粋: "CI jobs and release downloads may fail with a 504 Gateway Timeout status if they make anonymous calls."
+- 訳：匿名ユーザーの急増でタイムアウトが増えた障害。匿名での呼び出しでは CI ジョブやリリースのダウンロードが 504 Gateway Timeout で失敗する場合があった。
+- 公式：https://www.githubstatus.com/incidents/c9px7cw2ghrs
+
 ### 2026-11-08 19:36 – 21:32
 **Increase in timeouts for some unauthenticated users**
 - 種別：障害（GitHub Status / minor、対象：API Requests）
