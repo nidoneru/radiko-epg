@@ -1,5 +1,7 @@
 # GitHub 公式情報メモ（radiko-epg 照合用）
 
+時刻はすべて日本時間（UTC+9）。
+
 ## 記録（新しい順）
 
 ### 2026-11-12（pages build and deployment の注釈で表示）
