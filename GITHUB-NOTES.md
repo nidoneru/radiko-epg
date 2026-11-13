@@ -2,6 +2,13 @@
 
 時刻はすべて日本時間（UTC+9）。
 
+### 2026-11-13 05:59
+**Actions for ARM32 Linux & Windows retirement**
+- 種別：更新（GitHub Changelog、対象：Actions）
+- 原文抜粋: "GitHub Actions hosted runners will be ending support for ARM32 job execution on Windows and Linux by 8th Dec 2026."
+- 訳：GitHub Actions のホストランナーは、2026年12月8日までに Windows/Linux での ARM32 ジョブ実行のサポートを終了する。Node 24 が ARM32 に対応していないため。このリポジトリは x86_64 環境で動くため実害なし。
+- 公式：https://github.blog/changelog/2026-11-12-actions-for-arm32-linux-windows-retirement
+
 ### 2026-11-12（pages build and deployment の注釈で表示）
 **Node.js 20 の廃止に伴う強制移行**
 - 種別：更新（対象：Actions / Pages）
@@ -41,6 +48,13 @@
 - 原文抜粋: "Webhooks is experiencing degraded performance. We are continuing to investigate."
 - 訳：Webhooks と Actions の障害。
 - 公式：https://www.githubstatus.com/incidents/xxb3l2bm76dr
+
+### 2026-11-09 18:01
+**Secret scanning detects secrets in GitHub Actions workflow logs**
+- 種別：更新（GitHub Changelog、対象：Actions）
+- 原文抜粋: "GitHub secret scanning now detects secrets in GitHub Actions workflow logs, in addition to issues, wikis, discussions, and pull requests."
+- 訳：GitHub のシークレットスキャンが、Issues・Wiki・Discussions・プルリクエストに加えて、Actions のワークフローログ内のシークレットも検出するようになった。パブリックプレビュー。
+- 公式：https://github.blog/changelog/2026-11-09-secret-scanning-detects-secrets-in-github-actions-workflow-logs/
 
 ### 2026-11-09 14:59 – 18:09
 **Increased timeouts due to surge in anonymous users**
