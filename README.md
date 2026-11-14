@@ -23,7 +23,7 @@ radiko の公開フィードから番組データを取得して、アプリ本�
 ## リポジトリ内のファイル
 
 - `generate.py`：radiko の公開フィードから番組データを取得し、アプリ本体（index.html）と JSON データを生成するスクリプト（Python 標準ライブラリのみで動作）
-- `.github/workflows/generate.yml`：3時間おき（日本時間 02:07、05:07、…）に `generate.py` を実行し、`gh-pages` ブランチへ公開する GitHub Actions のワークフロー
+- `.github/workflows/generate.yml`：3時間おき（日本時間 05:07、08:07、…）に `generate.py` を実行し、`gh-pages` ブランチへ公開する GitHub Actions のワークフロー
 - `README.md`：このファイル（サイトと仕組みの説明）
 - `GITHUB-NOTES.md`：GitHub 公式発表（Actions / Pages の障害情報・更新情報）の記録。原文（英語）と日本語訳を併記し、運用中の事象との照合に使う資料
 - `CROSS-CHECK.md`：このサイトで起きた事象（スケジュールの不発・遅延など）と、GitHub 公式発表を照らし合わせた記録
