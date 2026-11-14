@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>radiko番組表（全47エリア・7日分） | radiko-epg</title>
+<meta name="description" content="radikoの番組表を、全47エリア・7日分まとめてエリア別・日別に一覧できるサイト。放送中の番組もひと目で分かります。">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="radiko-epg">
+<meta property="og:title" content="radiko番組表（全47エリア・7日分） | radiko-epg">
+<meta property="og:description" content="radikoの番組表を、全47エリア・7日分まとめてエリア別・日別に一覧できるサイト。放送中の番組もひと目で分かります。">
+<meta property="og:url" content="https://nidoneru.github.io/radiko-epg/">
+<meta property="og:image" content="https://nidoneru.github.io/radiko-epg/ogp.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.ico" sizes="any"><link rel="icon" href="favicon-32x32.png" sizes="32x32" type="image/png"><link rel="icon" href="favicon-16x16.png" sizes="16x16" type="image/png"><link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+<style>
+html, body { height: 100%; }
+body { font-family: sans-serif; margin: 0; color: #222;
+       display: flex; flex-direction: column; height: 100vh; height: 100dvh; }
+header { flex: none; padding: 8px 8px 0; background: #fff; }
+h1 { font-size: 18px; margin: 4px 0; }
+.note { font-size: 12px; color: #666; }
+.bar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 8px 0; }
+select { font-size: 15px; padding: 4px; }
+.tabs { display: flex; gap: 4px; flex-wrap: wrap; margin: 6px 0; }
+.tab { padding: 4px 10px; border: 1px solid #999; border-radius: 12px; font-size: 13px;
+       color: #333; text-decoration: none; background: #f4f4f4; }
+.tab.on { background: #01378E; color: #fff; border-color: #01378E; }
+.wrap { flex: 1; overflow: auto; border-top: 1px solid #ccc; }
+table { border-collapse: separate; border-spacing: 0; font-size: 11.5px; min-width: 100%; }
+th, td { border-right: 1px solid #ddd; border-bottom: 1px solid #ddd; padding: 3px 4px;
+         vertical-align: top; min-width: 118px; background: #fff; }
+thead th { background: #01378E; color: #fff; position: sticky; top: 0; z-index: 2; font-size: 12px; }
+thead th a { color: #fff; text-decoration: underline; }
+th.hr { background: #eef1f6; min-width: 30px; text-align: center; position: sticky; left: 0; z-index: 1; }
+thead th.hr { background: #01378E; z-index: 3; }
+.pr { margin-bottom: 5px; line-height: 1.35; }
+.tm { color: #666; font-size: 10.5px; display: block; }
+.ti.has { cursor: pointer; text-decoration: underline dotted #999; }
+.dt { margin-top: 2px; padding: 4px; background: #f6f8fb; border-left: 3px solid #01378E;
+      font-size: 11px; color: #444; }
+.pr.now { background: #fff3bf; outline: 2px solid #f5a623; border-radius: 3px; }
+.pr.now::before { content: "放送中 "; color: #c00; font-weight: bold; font-size: 10.5px; }
+footer { flex: none; padding: 4px 8px 8px; }
+footer details { font-size: 10px; color: #666; }
+footer summary { cursor: pointer; padding: 2px 0; }
+footer ul { margin: 4px 0 2px; padding-left: 16px; line-height: 1.6; }
+@media (min-width: 641px) { footer summary { display: none; } }
+</style>
+</head>
+<body>
+<header>
+<h1>radiko-epg <span class="note" id="h1note"></span></h1>
+<div class="bar">
+  <label>エリア <select id="area"></select></label>
+  <span class="note" id="gen"></span>
+</div>
+<p class="note">radikoの番組表を、全47エリア・7日分まとめて見られるサイトです。</p>
+<div class="tabs" id="tabs"></div>
+</header>
+<div class="wrap">
+<table>
+<thead></thead>
+<tbody></tbody>
+</table>
+</div>
+<footer>
+<details>
+<summary>注記</summary>
+<ul>
+<li>放送中の表示は、端末の時計で判定</li>
+<li>このサイトは radiko 公式ではない</li>
+<li>番組データは株式会社radikoと各放送局の提供情報に基づく</li>
+<li>番組情報の取得方法は radiko が公式に公開しているものではないため、仕様変更などにより動かなくなる場合がある</li>
+<li>番組内容は変更される場合がある</li>
+<li>聴取は radiko 公式サイトで</li>
+<li>無料で聴けるのは、自分のエリアの放送局のみ</li>
+</ul>
+</details>
+</footer>
+<script>window.EPG_META = {"days": ["20261114", "20261115", "20261116", "20261117", "20261118", "20261119", "20261120"], "generated": "2026/11/15 01:59", "areaName": {"JP1": "北海道", "JP2": "青森", "JP3": "岩手", "JP4": "宮城", "JP5": "秋田", "JP6": "山形", "JP7": "福島", "JP8": "茨城", "JP9": "栃木", "JP10": "群馬", "JP11": "埼玉", "JP12": "千葉", "JP13": "東京", "JP14": "神奈川", "JP15": "新潟", "JP16": "富山", "JP17": "石川", "JP18": "福井", "JP19": "山梨", "JP20": "長野", "JP21": "岐阜", "JP22": "静岡", "JP23": "愛知", "JP24": "三重", "JP25": "滋賀", "JP26": "京都", "JP27": "大阪", "JP28": "兵庫", "JP29": "奈良", "JP30": "和歌山", "JP31": "鳥取", "JP32": "島根", "JP33": "岡山", "JP34": "広島", "JP35": "山口", "JP36": "徳島", "JP37": "香川", "JP38": "愛媛", "JP39": "高知", "JP40": "福岡", "JP41": "佐賀", "JP42": "長崎", "JP43": "熊本", "JP44": "大分", "JP45": "宮崎", "JP46": "鹿児島", "JP47": "沖縄"}, "regions": [["北海道", ["JP1"]], ["東北", ["JP2", "JP3", "JP4", "JP5", "JP6", "JP7"]], ["関東", ["JP8", "JP9", "JP10", "JP11", "JP12", "JP13", "JP14"]], ["中部", ["JP15", "JP16", "JP17", "JP18", "JP19", "JP20", "JP21", "JP22", "JP23"]], ["近畿", ["JP24", "JP25", "JP26", "JP27", "JP28", "JP29", "JP30"]], ["中国", ["JP31", "JP32", "JP33", "JP34", "JP35"]], ["四国", ["JP36", "JP37", "JP38", "JP39"]], ["九州・沖縄", ["JP40", "JP41", "JP42", "JP43", "JP44", "JP45", "JP46", "JP47"]]], "weekdays": ["月", "火", "水", "木", "金", "土", "日"]};</script>
+<script>// radiko-epg SPA prototype: renders the guide client-side from per-area/day JSON.
+// Data sources: window.EPG_EMBED (single-file demo) or fetch('data/<area>/<date>.json').
+var META = window.EPG_META;
+var state = { area: 'JP13', date: META.days[0], data: null };
+// 「今日」は生成日ではなく端末の時計（放送日）で決める。生成が止まって
+// データが古くても、今日が7日分の中にあればその日を今日として開く。
+if (META.days.indexOf(broadcastToday()) >= 0) state.date = broadcastToday();
+try {
+  state.area = localStorage.getItem('radiko-epg-area') || 'JP13';
+} catch (e) {}
+// URL is always the bare root (にどねるzzZ's decision 2026-11-13): no query params
+// are read or written; area/date live only in app state + localStorage.
+
+function esc(s) {
+  return (s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
+                  .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+function p2(n) { return (n < 10 ? '0' : '') + n; }
+function fmt(d) {
+  return '' + d.getFullYear() + p2(d.getMonth() + 1) + p2(d.getDate()) +
+         p2(d.getHours()) + p2(d.getMinutes()) + p2(d.getSeconds());
+}
+function broadcastToday() {
+  var n = new Date();
+  if (n.getHours() < 5) n.setDate(n.getDate() - 1);
+  return '' + n.getFullYear() + p2(n.getMonth() + 1) + p2(n.getDate());
+}
+function hm(ts) { return parseInt(ts.substr(8, 2), 10) + ':' + ts.substr(10, 2); }
+function endLabel(ft, to) {
+  var e = hm(to);
+  if (to.substr(0, 8) !== ft.substr(0, 8) && parseInt(to.substr(8, 2), 10) < 12) {
+    e = (parseInt(to.substr(8, 2), 10) + 24) + ':' + to.substr(10, 2);
+  }
+  return e;
+}
+function bkey(ft, date) {
+  var h = parseInt(ft.substr(8, 2), 10);
+  if (ft.substr(0, 8) === date) return h >= 5 ? h : h + 24;
+  return h + 24;
+}
+function dateLabel(ds, withYear) {
+  var y = parseInt(ds.substr(0, 4), 10), m = parseInt(ds.substr(4, 2), 10),
+      d = parseInt(ds.substr(6, 2), 10);
+  var wd = META.weekdays[new Date(y, m - 1, d).getDay() === 0 ? 6 : new Date(y, m - 1, d).getDay() - 1];
+  return (withYear ? y + '/' : '') + m + '/' + d + '(' + wd + ')';
+}
+
+function buildHeader() {
+  var sel = document.getElementById('area');
+  var html = '';
+  META.regions.forEach(function(rg) {
+    html += '<optgroup label="' + esc(rg[0]) + '">';
+    rg[1].forEach(function(c) {
+      html += '<option value="' + c + '"' + (c === state.area ? ' selected' : '') +
+              '>' + esc(META.areaName[c]) + '</option>';
+    });
+    html += '</optgroup>';
+  });
+  sel.innerHTML = html;
+  var tabs = '';
+  var tk = broadcastToday();
+  META.days.forEach(function(ds) {
+    tabs += '<a class="tab' + (ds === state.date ? ' on' : '') + '" href="#" data-date="' +
+            ds + '">' + (ds === tk ? '今日 ' : '') + dateLabel(ds) + '</a>';
+  });
+  document.getElementById('tabs').innerHTML = tabs;
+}
+
+function render(data) {
+  state.data = data;
+  document.getElementById('h1note').textContent =
+    META.areaName[state.area] + ' ' + dateLabel(state.date) + ' の番組表';
+  document.getElementById('gen').textContent = '最終更新 ' + META.generated;
+  document.title = META.areaName[state.area] + 'の番組表 ' + dateLabel(state.date) + ' | radiko-epg';
+  var head = '<tr><th class="hr">時</th>';
+  data.stations.forEach(function(st) {
+    head += '<th><a href="https://radiko.jp/#!/live/' + st[0] +
+            '" target="_blank" rel="noopener">' + esc(st[1]) + '</a></th>';
+  });
+  head += '</tr>';
+  document.querySelector('thead').innerHTML = head;
+  // bucket programs per station per hour
+  var buckets = data.stations.map(function(st) {
+    var byHour = {};
+    (data.progs[st[0]] || []).forEach(function(pr) {
+      var k = bkey(pr.f, state.date);
+      (byHour[k] = byHour[k] || []).push(pr);
+    });
+    return byHour;
+  });
+  var rows = '';
+  for (var hour = 5; hour < 29; hour++) {
+    rows += '<tr><th class="hr">' + (hour < 24 ? hour : hour - 24) + '</th>';
+    data.stations.forEach(function(st, si) {
+      rows += '<td>';
+      (buckets[si][hour] || []).forEach(function(pr) {
+        var body = pr.d || '';
+        if (pr.p) body += (body ? '<br>' : '') + '出演者：' + esc(pr.p);
+        rows += '<div class="pr" data-ft="' + pr.f + '" data-to="' + pr.t + '">' +
+                '<span class="tm">' + hm(pr.f) + '–' + endLabel(pr.f, pr.t) + '</span> ' +
+                '<span class="ti' + (body ? ' has' : '') + '">' + esc(pr.ti) + '</span>' +
+                (body ? '<div class="dt" hidden>' + body + '</div>' : '') + '</div>';
+      });
+      rows += '</td>';
+    });
+    rows += '</tr>';
+  }
+  document.querySelector('tbody').innerHTML = rows;
+  buildHeader();
+  var cur = markNow();
+  if (cur && state.date === broadcastToday()) {
+    var wrap = document.querySelector('.wrap');
+    var er = cur.getBoundingClientRect(), wr = wrap.getBoundingClientRect();
+    wrap.scrollTop += (er.top - wr.top) - (wrap.clientHeight - er.height) / 2;
+  }
+}
+
+function markNow() {
+  var now = fmt(new Date()), cur = null;
+  document.querySelectorAll('.pr').forEach(function(el) {
+    var on = el.dataset.ft <= now && now < el.dataset.to;
+    el.classList.toggle('now', on);
+    if (on) cur = el;
+  });
+  return cur;
+}
+
+function load(area, date) {
+  state.area = area; state.date = date;
+  if (window.EPG_EMBED) {
+    var d = window.EPG_EMBED[area + '/' + date];
+    if (d) { render(d); }
+    else {
+      document.querySelector('tbody').innerHTML =
+        '<tr><td style="min-width:300px">この試作デモには東京（JP13）のデータだけが入っています。</td></tr>';
+      buildHeader();
+    }
+    return;
+  }
+  fetch('data/' + area + '/' + date + '.json')
+    .then(function(r) { return r.json(); })
+    .then(render)
+    .catch(function() {
+      document.querySelector('tbody').innerHTML =
+        '<tr><td style="min-width:300px">データを読み込めませんでした。</td></tr>';
+    });
+}
+
+document.getElementById('area').addEventListener('change', function() {
+  try { localStorage.setItem('radiko-epg-area', this.value); } catch (e) {}
+  load(this.value, state.date);
+});
+document.getElementById('tabs').addEventListener('click', function(ev) {
+  var a = ev.target.closest('a[data-date]');
+  if (!a) return;
+  ev.preventDefault();
+  load(state.area, a.dataset.date);
+});
+document.querySelector('tbody').addEventListener('click', function(ev) {
+  var ti = ev.target.closest('.ti.has');
+  if (!ti) return;
+  var dt = ti.parentElement.querySelector('.dt');
+  if (dt) dt.hidden = !dt.hidden;
+});
+var fd = document.querySelector('footer details');
+if (fd && window.matchMedia('(min-width: 641px)').matches) fd.open = true;
+var lastToday = broadcastToday();
+setInterval(function() {
+  var t = broadcastToday();
+  if (t !== lastToday) {
+    // 開いたまま5時を跨いだら、今日を見ていた場合だけ翌日へ切り替える
+    var wasToday = state.date === lastToday;
+    lastToday = t;
+    if (wasToday && META.days.indexOf(t) >= 0) { load(state.area, t); return; }
+    buildHeader();
+  }
+  markNow();
+}, 60000);
+load(state.area, state.date);
+</script>
+</body>
+</html>
