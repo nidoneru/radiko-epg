@@ -2,6 +2,13 @@
 
 時刻はすべて日本時間（UTC+9）。
 
+### 2026-11-16 20:59 – 2026-11-17 01:26
+**Incident with Pull Requests**
+- 種別：障害（GitHub Status、対象：Pull Requests / Actions）
+- 原文抜粋: "We've mitigated the issue affecting pull request merges and Actions workflow start times by reducing load on affected systems. Pull Requests and Actions have recovered, and we're continuing to monitor their performance." / "This incident has been resolved."
+- 訳：Pull Requests のマージのタイムアウトと Actions のワークフロー開始遅延を、対象システムの負荷軽減により緩和した。Pull Requests と Actions は回復し、性能の監視を継続中。解決済み。
+- 公式：https://www.githubstatus.com/incidents/2zfqmghmg3s3
+
 ### 2026-11-13 05:59
 **Actions for ARM32 Linux & Windows retirement**
 - 種別：更新（GitHub Changelog、対象：Actions）
