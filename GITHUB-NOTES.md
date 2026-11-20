@@ -2,6 +2,13 @@
 
 時刻はすべて日本時間（UTC+9）。
 
+### 2026-11-20 03:48
+**Red Hat Enterprise Linux runner images now generally available**
+- 種別：更新（GitHub Changelog、対象：Actions）
+- 原文抜粋: "Red Hat Enterprise Linux (RHEL) 9 and RHEL 10 images for GitHub-hosted larger runners are now generally available."
+- 訳：GitHub-hosted larger runner 向けの Red Hat Enterprise Linux (RHEL) 9 / 10 イメージが一般提供開始。2026年6月のパブリックプレビューを経て、GitHub Actions の本番ワークフローで正式に利用可能になった。
+- 公式：https://github.blog/changelog/2026-11-19-red-hat-enterprise-linux-runner-images-now-generally-available
+
 ### 2026-11-16 20:59 – 2026-11-17 01:26
 **Incident with Pull Requests**
 - 種別：障害（GitHub Status、対象：Pull Requests / Actions）
