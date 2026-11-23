@@ -2,6 +2,22 @@
 
 時刻はすべて日本時間（UTC+9）。
 
+## 2026-11-22（日）
+- 実績：
+  - 05:07 ×
+  - 08:07 ○
+  - 11:07 ×
+  - 14:07 ×
+  - 17:07 ○
+  - 20:07 ×
+  - 23:07 ×
+  - 02:07 ○
+- 発火時刻：
+  - 09:16:55（[#78](https://github.com/nidoneru/radiko-epg/actions/runs/44965846659)）
+  - 18:40:30（[#80](https://github.com/nidoneru/radiko-epg/actions/runs/45008685775)）
+  - 03:26:59（[#82](https://github.com/nidoneru/radiko-epg/actions/runs/45055139930)、11-23）
+- 公式発表：その時刻帯に重なる Actions / Pages / API Requests の発表はなし。
+
 ## 2026-11-21（土）
 - 事象：
   - 05:07 ×
