@@ -146,7 +146,7 @@ def app_html(meta):
 <meta name="twitter:card" content="summary_large_image">
 {FAVICON_LINKS.format(p='')}
 <style>{CSS}</style>
-<script data-goatcounter="https://nidoneru.goatcounter.com/count"
+<script data-goatcounter="https://radiko-epg.goatcounter.com/count"
         data-goatcounter-settings='{{"no_onload": true}}'
         async src="//gc.zgo.at/count.js"></script>
 </head>
